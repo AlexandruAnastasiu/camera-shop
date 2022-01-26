@@ -95,7 +95,7 @@ Project Link: [https://github.com/AlexandruAnastasiu/camera-shop](https://github
 ## Acknowledgments
 
 * [Bootstrap Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-* [GitHub Pages](https://pages.github.com)
+* [Netlify](https://www.netlify.com/)
 * [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
