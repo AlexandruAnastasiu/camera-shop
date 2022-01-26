@@ -4,7 +4,7 @@ class CustomHeader extends HTMLElement {
         <!--Navbar-->
         <nav class="navbar navbar-expand-md navbar-light m-0 p-0">
           <div class="nav-container container-fluid bg-dark px-4">
-              <a href="index.html" class="navbar-brand">
+              <a href="/index.html" class="navbar-brand">
                   <span class="fw-bold text-secondary">
                       <img src="/img/logo.png" alt="logo" class="img-fluid" width="300px">
                   </span>
@@ -18,7 +18,7 @@ class CustomHeader extends HTMLElement {
               <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                   <ul class="navbar-nav container-fluid d-flex justify-content-end align-items-center fs-5">
                       <li class="nav-item">
-                          <a class="nav-link text-white" href="index.html#featured-products">SHOP</a>
+                          <a class="nav-link text-white" href="/index.html#featured-products">SHOP</a>
                       </li>
                       <li class="nav-item text-white">
                           <a class="nav-link text-white" href="#contact">ABOUT</a>
@@ -32,7 +32,7 @@ class CustomHeader extends HTMLElement {
                         </button>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="http://127.0.0.1:5500/cart.html">
+                          <a class="nav-link" href="cart.html">
                               <button class="btn btn-shopping-cart position-relative">
                                   <i class="bi bi-cart4 fs-2 cart-logo"></i>
                                   <p class="bg-danger text-white rounded-circle cart-pop px-2 d-none"></p>
@@ -314,9 +314,9 @@ let SearchBar = {
             displayedSuggestions.forEach(suggestion => { 
                 let newSuggestionElement = suggestionTemplate.cloneNode(true);
                 if (suggestion.startsWith('Category:')) {
-                    newSuggestionElement.querySelector('a').href = `index.html#${suggestion.replace('Category: ', '').toLowerCase()}`;
+                    newSuggestionElement.querySelector('a').href = `/index.html#${suggestion.replace('Category: ', '').toLowerCase()}`;
                 } else {
-                    newSuggestionElement.querySelector('a').href = `index.html?product=${suggestion}`;
+                    newSuggestionElement.querySelector('a').href = `/index.html?product=${suggestion}`;
                 }
                 newSuggestionElement.querySelector('a').innerText = suggestion;
                 newSuggestionElement.removeAttribute('id');
