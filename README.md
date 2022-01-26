@@ -68,7 +68,7 @@ Frameworks:
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-The usage is easy and efficient, the functionalities being created in an intuitive way, simulating in detail the interaction with an online store
+The use is easy and efficient, the functionalities being designed in an intuitive way that simulates in detail the interaction with an online store
 
 Featured Products:
 <img src="img/demo2.PNG" alt="Demo">
