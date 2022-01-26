@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Retro Memories</title>
+</head>
+<body>
+    <custom-header></custom-header>
+    <!--Carousel Ads Small-->
+    <div id="carousel-small" class="container-fluid d-md-none px-0 d-flex flex-column justify-content-center align-items-center">
+      <img class="img-fluid mb-5" src="/img/carouseltextredim.png" alt="carousel text" width="500px">
+      <a class="text-decoration-none" href="#featured-films">
+        <button class="btn slider-sm-btn fs-2 d-flex justify-content-center align-items-center p-3">
+          <span class="fs-4 mx-4">SHOP NOW</span>
+        </button>
+      </a>
+    </div>
+    <!--Carousel Ads Small-->
+    <!--Carousel Ads-->
+    <div class="container-fluid d-none d-md-block px-0">
+        <div id="carousel-ads" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-ads" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel-ads" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel-ads" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel-ads" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row h-100 justify-content-end">
+                  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <img class="img-fluid mb-5" src="/img/carousel-text-1.png" alt="carousel text" width="650px">
+                    <a class="text-decoration-none" href="#featured-products">
+                      <button class="btn slider-btn fs-2 d-flex justify-content-center align-items-center p-3">
+                        <span class="fs-4 mx-4">SHOP NOW</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row h-100">
+                  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <img class="img-fluid mb-5" src="/img/carousel-text-2.png" alt="carousel text" width="600px">
+                    <a class="text-decoration-none" href="#cameras">
+                      <button class="btn slider-btn fs-2 d-flex justify-content-center align-items-center p-3">
+                        <span class="fs-4 mx-4">SHOP NOW</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row h-100 justify-content-end">
+                  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <img class="img-fluid mb-5" src="/img/carousel-text-3.png" alt="carousel text" width="650px">
+                    <a class="text-decoration-none" href="#films">
+                      <button class="btn slider-btn fs-2 d-flex justify-content-center align-items-center p-3">
+                        <span class="fs-4 mx-4">SHOP NOW</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row h-100">
+                  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                    <img class="img-fluid mb-5" src="/img/carousel-text-4.png" alt="carousel text" width="600px">
+                    <a class="text-decoration-none" href="#contact">
+                      <button class="btn slider-btn fs-2 d-flex justify-content-center align-items-center p-3">
+                        <span class="fs-4 mx-4">JOIN NOW</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ads" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="d-none">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-ads" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="d-none">Next</span>
+            </button>
+          </div>
+    </div>
+    <!--Featured Products-->
+    <section id="featured-products">
+        <div class="container-fluid py-5 ft-prod">
+            <h2 class="lead fs-3 text-center py-4">Featured Products</h2>
+            <div class="row flex-column justify-content-center align-items-center">
+                <!--Cameras-->
+                <div id="cameras" class="category col-9 col-lg-7 d-flex justify-content-center my-5">
+                    <div class="container-fluid px-0">
+                        <h3 class="category-name display-5 fs-3 fw-bold">Cameras</h3>
+                        <div id="carousel-products" class="carousel slide" data-bs-ride="carousel carousel-products">
+                            <div class="carousel-indicators indicators-products">
+                              <button type="button" data-bs-target="#carousel-products" data-bs-slide-to="0" class="active bg-secondary" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" class="bg-secondary" data-bs-target="#carousel-products" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div id="cameras-inner" class="carousel-inner">
+                              <!--Camera Carousel 1-->
+                              <div class="carousel-item-cameras carousel-item active">
+                                <div class="cameras-items card-group">
+                                  <!--Item-->
+                                    <div id="item" class="item card row flex-column align-items-center border-0 mx-2 pt-2 d-none">
+                                      <div class="col-8">
+                                        <img src="/img/no-item.jpg" class="card-img-top item-img" alt="...">
+                                      </div>
+                                      <div class="card-body">
+                                        <h5 class="card-title text-center item-title"></h5>
+                                        <p class="card-text text-center item-rating fs-5">
+                                          <i id="star-1" class="text-muted bi bi-star"></i>
+                                          <i id="star-2" class="text-muted bi bi-star"></i>
+                                          <i id="star-3" class="text-muted bi bi-star"></i>
+                                          <i id="star-4" class="text-muted bi bi-star"></i>
+                                          <i id="star-5" class="text-muted bi bi-star"></i>
+                                          <span class="item-rating-number"></span>
+                                        </p>
+                                        <p class="card-text fw-bold fs-4 text-center">$<span class="item-price">99.99</span></p>
+                                      </div>
+                                      <buttton class="btn btn-add-cart d-flex justify-content-center align-items-center text-white">
+                                        <p class="pt-3 ">ADD TO CART</p>
+                                        <i class="ms-2 fs-5 bi bi-plus-circle"></i>
+                                      </buttton>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev carousel-prev" type="button" data-bs-target="#carousel-products" data-bs-slide="prev">
+                                <i class="text-dark fs-2 bi bi-arrow-left-square-fill"></i>
+                              <span class="d-none">Previous</span>
+                            </button>
+                            <button class="carousel-control-next carousel-next" type="button" data-bs-target="#carousel-products" data-bs-slide="next">
+                                <i class="text-dark fs-2 bi bi-arrow-right-square-fill"></i>
+                              <span class="d-none">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+                <!--Roll Films-->
+                <div id="films" class="category col-9 col-lg-7 d-flex justify-content-center my-5">
+                    <div class="container-fluid px-0">
+                        <h3 class="category-name display-5 fs-3 fw-bold">Films</h3>
+                        <div id="carousel-films" class="carousel slide" data-bs-ride="carousel carousel-films">
+                            <div class="carousel-indicators indicators-products">
+                              <button type="button" data-bs-target="#carousel-films" data-bs-slide-to="0" class="active bg-secondary" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" class="bg-secondary" data-bs-target="#carousel-films" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div id="films-inner" class="carousel-inner">
+                              <!--Film Carousel 1-->
+                              <div class="carousel-item-films carousel-item active">
+                                <div id="films-items" class="card-group">
+                                  <!--Item-->
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev carousel-prev" type="button" data-bs-target="#carousel-films" data-bs-slide="prev">
+                                <i class="text-dark fs-2 bi bi-arrow-left-square-fill"></i>
+                              <span class="d-none">Previous</span>
+                            </button>
+                            <button class="carousel-control-next carousel-next" type="button" data-bs-target="#carousel-films" data-bs-slide="next">
+                                <i class="text-dark fs-2 bi bi-arrow-right-square-fill"></i>
+                              <span class="d-none">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Floating Cart-->
+    <div class="row justify-content-end cart-floating-preview d-none pe-2">
+      <!--Floating Cart Logo-->
+      <div class="col-2 align-self-end">
+        <button class="btn floating-cart-logo shadow rounded-circle m-2">
+          <i class="text-white bi bi-cart4 fs-2"></i>
+          <p class="floating-cart-notification bg-danger text-white rounded-circle px-2">2</p>
+        </button>
+      </div>
+      <!--Floating Cart Logo-->
+
+      <!--Floating Cart Body-->
+      <div class="col-10 floating-cart-body d-none p-0">
+        <div class="card floating-cart border-0 shadow">
+          <div class="container-fluid floating-cart-header text-center text-white fs-4 d-flex justify-content-center">
+            <span class="fa-stack my-2">
+              <i class="fas fa-shopping-bag fa-stack-2x"></i>
+              <p class="fa-stack-1x mt-2 fw-bold floating-cart-number">2</p>
+            </span>
+            <span class="d-flex align-self-center">
+              <p class="mb-0 mt-3 fw-bold fs-3">Your Cart</p>
+            </span>
+            <button class="btn close-floating-cart ms-auto fs-4">
+              <i class="text-white bi bi-x-circle"></i>
+            </button>
+          </div>
+          <div class="card-body floating-cart-item-list">
+            <div id="floating-cart-item-model" class="floating-cart-item row justify-content-center align-items-center border-top border-bottom py-2 d-none">
+              <div class="col-4">
+                <img class="floating-cart-item-img w-100" src="/img/item-1.jpg" alt="item image">
+              </div>
+              <div class="col-6">
+                <div class="row flex-column">
+                  <p class="m-0 fw-bold floating-cart-item-title">Lorem ipsum dolor sit amet.</p>
+                  <p class="m-0"><span class="preview-quantity fw-bold">2</span> X <span class="preview-unit-price fw-bold">25.5</span> = $<span class="preview-total-price fw-bold">51</span></p>
+                </div>
+              </div>
+              <div class="col-2">
+                <button class="btn delete-preview-item" type="button">
+                  <i class="bi bi-trash-fill text-danger fs-5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="floating-cart-footer d-flex justify-content-between align-items-center">
+            <p class="text-white fw-bold fs-5 ms-4 my-0">Subtotal: $<span class="floating-cart-subtotal">5</span></p>
+            <a href="http://127.0.0.1:5500/cart.html"><button class="btn go-to-cart-btn fw-bold mb-2 my-2 me-3">Shopping cart</button></a>
+          </div>
+        </div>
+      </div>
+      <!--Floating Cart Body-->
+    </div>
+    <!--Floating Cart-->
+
+    <div class="blanket d-none"></div>
+
+    <custom-footer></custom-footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6a7e2a29bc.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/header-footer.js"></script>
+</body>
+</html>

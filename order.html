@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="shortcut icon" href="#">
+    <title>Order Details</title>
+</head>
+<body>
+    <custom-header></custom-header>
+
+    <section class="h-100 py-5">
+        <div class="container-fluid row flex-column justify-content-center align-items-center my-5">
+            <div class="col-10 card shadow mb-4 p-0">
+                <div class="card-header">
+                    <h3 class="fw-bold m-2">Order Details <span><i class="fs-3 bi bi-clipboard-check"></i></span></h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="ft-prod d-flex m-0 py-3 order-info">
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Order Placed</h5>
+                            <span id="order-date" class="fw-bold fs-5">Date</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Order #</h5>
+                            <span id="order-id" class="fw-bold fs-5">Order id</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Status</h5>
+                            <span id="order-status" class="fw-bold fs-5">Pending</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Total</h5>
+                            <p class="fw-bold fs-5">$<span id="order-total">Total</span></p>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Shipping Cost</h5>
+                            <span id="order-shipping-cost" class="fw-bold fs-5">Cost</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Delivered by</h5>
+                            <span id="order-courier" class="fw-bold fs-5">Courier</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Ship To</h5>
+                            <span id="order-destination" class="fw-bold fs-5">Destination</span>
+                        </div>
+                        <div class="col-2 d-flex flex-column align-items-center">
+                            <h5 class="text-secondary mb-3">Arrival Date</h5>
+                            <span id="order-arrival-date" class="fw-bold fs-5">Date</span>
+                        </div>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody id="order-products">
+                          <tr class="ordered-item d-none">
+                            <th class="item-id" scope="row"></th>
+                            <td class="item-name"></td>
+                            <td class="item-qty"></td>
+                            <td>$<span class="item-price"></span></td>
+                            <td>$<span class="item-total"></span></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                    <div class="card-header d-flex justify-content-end">
+                        <a href="/index.html" class="btn order-back fw-bold my-1 d-flex justify-content-center align-items-center shadow"><i class="fa fa-compass fs-4 my-1 me-2" aria-hidden="true"></i>Explore more products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    
+    <custom-footer></custom-footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/header-footer.js"></script>
+    <script src="/js/order.js"></script>
+    <script src="https://kit.fontawesome.com/6a7e2a29bc.js" crossorigin="anonymous"></script>
+</body>
+</html>

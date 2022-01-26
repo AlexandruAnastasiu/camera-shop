@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "category": "camera",
+        "img": "/img/item-1.jpg",
+        "title": "Polaroid Originals Now I-Type Instant Camera",
+        "description": "The Polaroid Now takes the simplicity from the OneStep cameras from the ‘70s.",
+        "rating": 4.55,
+        "price": 119.99,
+        "quantity": 1 
+    },
+    {
+        "id": 2,
+        "category": "camera",
+        "img": "/img/item-2.jpg",
+        "title": "Polaroid Originals OneStep 2 Instant Camera",
+        "description": "The OneStep 2 is a new polaroid camera that blends classic design with contemporary style.",
+        "rating": 4.3,
+        "price": 159.98,
+        "quantity": 1 
+    },
+    {   
+        "id": 3,
+        "category": "camera",
+        "img": "/img/item-3.jpg",
+        "title": "KODAK FunSaver 35mm, Single-use",
+        "description": "The 27-exposure Kodak FunSaver 35mm single-use camera offers exceptional value and convenience.",
+        "rating": 3.67,
+        "price": 25.00,
+        "quantity": 1 
+    },
+    {
+        "id": 4,
+        "category": "film",
+        "img": "/img/item-4.jpg",
+        "title": "Kodak Colorplus Film 200 ASA 36 Exposure",
+        "description": "Excellent consistency & Excellent processing robustness.",
+        "rating": 5,
+        "price": 39.99,
+        "quantity": 1 
+    },
+    {
+        "id": 5,
+        "category": "film",
+        "img": "/img/item-5.jpg",
+        "title": "Kodak Ektar 100 Professional, 36 Exposures",
+        "description": "Designed for exposure",
+        "rating": 2.38,
+        "price": 37.99,
+        "quantity": 1 
+    },
+    {
+        "id": 6,
+        "category": "film",
+        "img": "/img/item-6.jpg",
+        "title": "Fuji C200 35mm Film 135-36 Fujifilm Color",
+        "description": "Designed for exposure by daylight and electronic flash.",
+        "rating": 4.33,
+        "price": 39.99,
+        "quantity": 1 
+    },
+    {
+        "id": 7,
+        "category": "camera",
+        "img": "/img/item-7.jpg",
+        "title": "Olympus - OM-D E-M10 Mark II Mirrorless Camera",
+        "description": "Capture and share stunning images with this Olympus Mark II digital camera.",
+        "rating": 4.6,
+        "price": 509.99,
+        "quantity": 1 
+    },
+    {
+        "id": 8,
+        "category": "camera",
+        "img": "/img/item-8.jpg",
+        "title": "Fujifilm - X Series X-T200 Mirrorless Camera",
+        "description": "Capture memories in high resolution using this 24.2MP Fujifilm X-T200 digital camera.",
+        "rating": 4.4,
+        "price": 799.99,
+        "quantity": 1 
+    },
+    {
+        "id": 9,
+        "category": "camera",
+        "img": "/img/item-9.jpg",
+        "title": "Nikon - Z fc 4K Video Mirrorless Camera",
+        "description": "The Z fc mirrorless camera features a classic, tactile design fused with modern Z series technology.",
+        "rating": 4.5,
+        "price": 1099.99,
+        "quantity": 1 
+    },
+    {
+        "id": 10,
+        "category": "film",
+        "img": "/img/item-10.jpg",
+        "title": "Kodak 603 4029 Ultramax 400 Color Negative Film",
+        "description": "Clear, vibrant pictures with ISO 400-speed color print films.",
+        "rating": 4.7,
+        "price": 18.63,
+        "quantity": 1 
+    },
+    {
+        "id": 11,
+        "category": "film",
+        "img": "/img/item-11.jpg",
+        "title": "Kodak Gold 200 36 exposure film",
+        "description": "Kodak quality at an attractive price.",
+        "rating": 4.8,
+        "price": 35.44,
+        "quantity": 1 
+    },
+    {
+        "id": 12,
+        "category": "film",
+        "img": "/img/item-12.jpg",
+        "title": "Kodak E100G Professional ISO 100",
+        "description": "Neutral color balance, natural skin-tone reproduction.",
+        "rating": 4.9,
+        "price": 29.99,
+        "quantity": 1 
+    }
+]

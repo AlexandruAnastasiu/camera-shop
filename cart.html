@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="shortcut icon" href="#">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <custom-header></custom-header>
+    <section class="h-100">
+        <div class="container py-5">
+          <div class="row d-flex justify-content-center my-4">
+            <div class="col-md-8">
+              <!--Progress Bar-->
+              <ul id="progressbar" class="container-fluid">
+                <li class="active" id="cart"><strong>Shopping Cart</strong></li>
+                <li id="shipping-details"><strong>Shipping Details</strong></li>
+                <li id="payment"><strong>Payment</strong></li>
+                <li id="finish"><strong>Finish</strong></li>
+              </ul>
+              <!--Step 1 Cart-->
+              <div class="wizard-page" id="wp-cart">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h5 class="mb-0">Cart - <span class="cart-items-number">0</span> items</h5>
+                  </div>
+                  <div class="item-list card-body">
+                    <div class="default-message container-fluid d-flex justify-content-center mt-3 d-none">
+                      <p class="fs-5 text-muted">Your cart is empty <span><i class="bi bi-emoji-frown pt-1"></i></span></p>
+                    </div>
+                    <!-- Item -->
+                    <div class="item row d-none">
+                      <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                        <!-- Image -->
+                        <img src="" class="item-image w-100"/>
+                      </div>
+        
+                      <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                        <!-- Data -->
+                        <p class="item-title lead"></p>
+                        <p class="item-description text-muted"></p>
+                        <p class="lead">Price: $<span class="unit-price"></span></p>
+                        <button type="button" class="delete-product btn btn-primary btn-sm me-1 mb-2" data-bs-toggle="modal" data-bs-target="">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm mb-2">
+                          <i class="bi bi-heart-fill"></i>
+                        </button>
+                        <!-- Data -->
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                          <!-- Quantity -->
+                          <div class="row justify-content-center align-items-center">
+                              <div class="col-4 text-center">
+                                  <!--Minus Button-->
+                                  <button class="btn minus sign-btn" type="button">
+                                      <h2 class="m-0"><i class="minus-btn bi bi-dash-circle"></i></h2>
+                                  </button>
+                              </div>
+                              <div class="col-4 text-center">
+                                  <!--Input "Counter"-->
+                                  <input class="form-control text-center quantity-input bg-white border-0 fs-4 theme-color" type="text" value="1" maxlength="2" autocomplete="off" disabled>
+                              </div>
+                              <div class="col-4 text-center">
+                                  <button class="btn plus sign-btn" type="button">
+                                      <h2 class="m-0"><i class="plus-btn bi bi-plus-circle"></i></h2>
+                                  </button>
+                              </div>
+                          </div>
+                          <!-- Quantity -->
+      
+                        <!-- Price -->
+                        <p class="text-start text-md-center mt-3 fw-bold">$<span class="item-total"></span></p>
+                        <!-- Price -->
+                      </div>
+                      <hr class="my-4" />
+                      <!-- Modal -->
+                      <div class="modal fade delete-modal" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex flex-column justify-content-center align-items-center">
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  <h5 class="modal-title text-center" id="exampleModalLabel">Are you sure you want to remove</h5>
+                                  <h5 class="modal-title-item fw-bold"></h5>
+                                  <h5>from cart?</h5>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button type="button" class="btn confirm-delete btn-success" data-bs-dismiss="modal">Confirm</button>
+                                    <button type="button" class="btn cancel-delete btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <p><strong>Expected shipping delivery</strong></p>
+                    <p class="mb-0 expected-delivery-date">Empty Shopping Cart</p>
+                  </div>
+                </div>
+                <div class="card shadow mb-4 mb-lg-0">
+                  <div class="card-body">
+                    <p><strong>We accept</strong></p>
+                    <img class="me-2" width="45px"
+                      src="img/visa-logo2.png"
+                      alt="Visa" />
+                    <img class="me-2" width="45px"
+                      src="img/americanexpress-logo.png"
+                      alt="American Express" />
+                    <img class="me-2" width="45px"
+                      src="img/mastercard-logo.png"
+                      alt="Mastercard" />
+                    <img class="me-2" width="45px"
+                      src="img/paypal-logo.png"
+                      alt="PayPal" />
+                  </div>
+                </div>
+                <div class="container-fluid d-flex justify-content-end px-2 mt-4">
+                  <button class="btn next shadow">Next</button>
+                </div>
+              </div>
+              <!--Step 2 Shipping Details-->
+              <div class="wizard-page d-none" id="wp-shipping-details">
+                <div class="card shadow mb-4">
+                  <!--Title-->
+                  <p class=" fs-2 ms-5 my-4 fw-bold text-secondary">Shipping Address <span id="form-invalid" class="fs-5 d-none text-danger ms-2">Please check all fields<i class="ms-2 fs-4 bi bi-exclamation-triangle-fill"></i></span></p>
+                  <!--Email-->
+                  <div class="email mx-5 mb-3">
+                    <label for="email" class="text-secondary">Email address <span id="email-valid" class="d-none text-success ms-2">Looks good! <i class="bi bi-check2"></i></span></label>
+                    <div class="input-group">
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Your email" autocomplete="off" required>
+                      <span class="input-group-text text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="For order confirmation"><i class="bi bi-question-circle"></i></span> 
+                    </div>
+                    <span id="email-invalid" class="d-none text-danger ms-2">
+                        Please enter an email address <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                  <div class="fname mx-5 mb-3">
+                    <!--First Name-->
+                    <label for="fname" class="text-secondary">First Name <span id="fname-valid" class="d-none text-success ms-2">Looks good! <i class="bi bi-check2"></i></span></label>
+                    <input type="text" id="fname" class="form-control" placeholder="First Name" name="fname" autocomplete="off" required>
+                    <span id="fname-invalid" class="d-none text-danger ms-2">
+                        Please enter yout first name <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                  <div class="lname mx-5 mb-3">
+                    <!--Last Name-->
+                    <label for="lname" class="text-secondary">Last Name <span id="lname-valid" class="d-none text-success ms-2">Looks good! <i class="bi bi-check2"></i></span></label>
+                    <input type="text" id="lname" class="form-control" placeholder="Last Name" name="lname" autocomplete="off" required>
+                    <span id="lname-invalid" class="d-none text-danger ms-2">
+                        Please enter your last name <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                  <!--County-->
+                  <div class="county mx-5 mb-3">
+                    <label for="select-county" class="text-secondary">County <span id="county-valid" class="d-none text-success ms-2"><i class="bi bi-check2"></i></span></label>
+                    <select class="form-select" name="county" id="select-county" autocomplete="off" required>
+                      <option selected="true" disabled="disabled" value="default">Choose county...</option>    
+                    </select>
+                    <span id="county-invalid" class="d-none text-danger ms-2">
+                      Please select county <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                  <!--City-->
+                  <div class="county mx-5 mb-3">
+                    <label for="select-city" class="text-secondary">City <span id="city-valid" class="d-none text-success ms-2"><i class="bi bi-check2"></i></span></label>
+                    <select class="form-select" name="city" id="select-city" autocomplete="off" required disabled>
+                      <option selected="true" disabled="disabled" value="default">Please choose a county first...</option>    
+                    </select>
+                    <span id="city-invalid" class="d-none text-danger ms-2">
+                      Please select city <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                  </span>
+                  </div>
+                  <!--Address-->
+                  <div class="address mx-5 mb-3">
+                    <label for="address" class="text-secondary">Address <span id="address-valid" class="d-none text-success ms-2">Looks good! <i class="bi bi-check2"></i></span></label>
+                    <input type="text" id="address" class="form-control" placeholder="Write your detailed address here..." name="address" autocomplete="off" required>
+                    <span id="address-invalid" class="d-none text-danger ms-2">
+                        Please enter your detailed address <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                  <!--Phone-->
+                  <div class="phone mx-5 mb-5">
+                    <label for="phone" class="text-secondary">Phone <span id="phone-valid" class="d-none text-success ms-2">Looks good! <i class="bi bi-check2"></i></span></label>
+                    <div class="input-group">
+                      <input type="tel" id="phone" class="form-control" placeholder="Write your phone number here..." name="phone" autocomplete="off" required>
+                      <span class="input-group-text text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Contact for delivery"><i class="bi bi-question-circle"></i></span> 
+                    </div>
+                    <span id="phone-invalid" class="d-none text-danger ms-2">
+                        Please enter your phone number <i class="fs-4 bi bi-exclamation-triangle-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="card shadow my-4">
+                  <!--Title-->
+                  <h2 class="ms-5 mt-4 mb-5 fw-bold text-secondary">Shipping Method</h2>
+                  <!--Shipping Methods-->
+                  <!--Method1-->
+                  <div class="row container-fluid justify-content-center align-items-center my-2">
+                    <div class="col-6 d-flex d-flex flex-column">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="delivery" id="delivery1" checked>
+                        <label class="form-check-label" for="delivery1">Courier Delivery Service - Cargus</label>
+                      </div>
+                      <p class="text-muted mx-5">Shipping Fee: <span class="shipping-fee"></span></p>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center delivery-date"></div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <img src="/img/cargus-100.webp" class="w-50"/>
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Method2-->                  
+                  <div class="row container-fluid justify-content-center align-items-center my-2">
+                    <div class="col-6 d-flex flex-column">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="delivery" id="delivery2">
+                        <label class="form-check-label" for="delivery2">Courier Delivery Service - FAN Courier</label>
+                      </div>
+                      <p class="text-muted mx-5">Shipping Fee: <span class="shipping-fee"></span></p>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center delivery-date"></div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <img src="/img/fancourier_logo.webp" class="w-50">
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Method3-->                  
+                  <div class="row container-fluid justify-content-center align-items-center my-2">
+                    <div class="col-6 d-flex flex-column">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="delivery" id="delivery3">
+                        <label class="form-check-label" for="delivery3">Courier Delivery Service - DPD</label>
+                      </div>
+                      <p class="text-muted mx-5">Shipping Fee: <span class="shipping-fee"></span></p>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center delivery-date"></div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <img src="/img/dpd_logo.webp" class="w-100">
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Method4-->                  
+                  <div class="row container-fluid justify-content-center align-items-center my-2">
+                    <div class="col-6 d-flex flex-column">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="delivery" id="delivery4">
+                        <label class="form-check-label" for="delivery4">Collect Point - Fan Courier</label>
+                      </div>
+                      <p class="text-muted mx-5">Shipping Fee: <span class="shipping-fee"></span></p>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center align-items-center delivery-date"></div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <img src="/img/fancourier_collect_point_logo.webp" class="w-50">
+                    </div>
+                  </div>
+                </div>
+                <!--Navigation Buttons-->
+                <div class="container-fluid d-flex justify-content-between px-2 mt-4">
+                  <button class="btn previous shadow">Previous</button>
+                  <button class="btn next form-submit shadow">Next</button>
+                </div>
+              </div>
+              <!--Step 3 Payment-->
+              <div class="wizard-page d-none" id="wp-payment">
+                <div class="card shadow mb-4">
+                  <!--Title-->
+                  <p class=" fs-2 ms-5 my-4 fw-bold text-secondary">Choose a payment method</p>
+                  <!--Method1-->
+                  <div class="row container-fluid justify-content-center align-items-center mt-4">
+                    <div class="col-10 d-flex align-items-center">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="payment" id="payment1" value="0" checked>
+                      </div>
+                      <img src="/img/visa-logo.webp" class="me-3">
+                      <p class="fw-bold text-secondary p-0 m-0">Pay with card</p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <p class="text-success p-0 m-0">Free</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Method2-->
+                  <div class="row container-fluid justify-content-center align-items-center">
+                    <div class="col-10 d-flex align-items-center">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="payment" id="payment2" value="0">
+                      </div>
+                      <img src="/img/banking-logo.webp" class="me-3">
+                      <p class="fw-bold text-secondary p-0 m-0">Bank Transfer</p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <p class="text-success p-0 m-0">Free</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Method3-->
+                  <div class="row container-fluid justify-content-center align-items-center mb-3">
+                    <div class="col-10 d-flex align-items-center">
+                      <div class="form-check mx-4">
+                        <input class="form-check-input" type="radio" name="payment" id="payment3" value="5">
+                      </div>
+                      <img src="/img/cash-logo.webp" class="me-3">
+                      <p class="fw-bold text-secondary p-0 m-0">Cash at delivery</p>
+                    </div>
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                      <p class="text-secondary p-0 m-0">$5</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <!--Shipping Notes-->
+                  <div class="mx-5 my-3">
+                    <p class="notes-btn theme-link text-decoration-none">Shipping Notes <span><i class="shipping-notes-logo bi bi-caret-down-fill"></i></span></p>
+                    <div class="notes mb-3 d-none">
+                      <label for="shipping-notes" class="form-label text-secondary">Adding a note can increase the processing time of your order.</label>
+                      <textarea class="form-control" id="shipping-notes" rows="3" placeholder="Type your note here..."></textarea>
+                    </div>
+                  </div>
+                  <!--Agree Terms-->
+                  <div class="form-check mx-5 mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="terms" name="terms">
+                    <label class="form-check-label" for="terms">
+                      <p class="text-secondary">I have read and agreed to the <a href="#" class="theme-link">terms and conditions</a>.</p>
+                      <span id="terms-invalid" class="d-none text-danger">Please agree to the terms and conditions before placing the order<i class="ms-2 fs-4 bi bi-exclamation-triangle-fill"></i></span></p>
+                    </label>
+                  </div>
+                </div>
+                <!--Navigation Buttons-->
+                <div class="container-fluid d-flex justify-content-between px-2 mt-4">
+                  <button class="btn previous shadow">Previous</button>
+                  <button class="btn next shadow payment-submit">Next</button>
+                </div>
+              </div>
+              <!--Step 4 Finish-->
+              <div class="wizard-page d-flex flex-column align-items-center position-relative d-none" id="wp-finish">
+                <img id="polaroid-frame" src="/img/polaroid.png">
+                <div class="order-confirmation d-flex flex-column justify-content-center align-items-center">
+                  <img class="ms-4" src="/img/success.png" alt="success confetti" width="200px">
+                  <h2 class="text-center fw-bold mt-5">Your order is complete!</h2>
+                  <small class="mb-3">You will be receiving a confirmation email with order details.</small>
+                  <a href="/order.html" class="text-dark"><small>See your order details here.</small></a>
+                </div>
+                <a href="/index.html" class="btn finish-btn fw-bold my-4 d-flex justify-content-center align-items-center"><i class="fa fa-compass fs-4 me-2" aria-hidden="true"></i>Explore more products</a>
+              </div>
+            </div>
+            <!--Summary-->
+            <div id="summary" class="col-md-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h5 class="mb-0">Summary</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                      Subtotal
+                      <p>$<span id="subtotal">0</span></p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                      Shipping
+                      <span id="shipping">$0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mt-2 pb-0">
+                      <p><strong>Total amount</strong></p>
+                      <p class="fw-bold">$<span id="total">0</span></p>
+                    </li>
+                  </ul>
+                  <!-- <button type="button" class="btn btn-primary btn-lg btn-block checkout-btn">
+                    <p class="text-white m-0">Checkout <i class="bi bi-check-circle-fill fs-5 ps-1"></i></i></p>
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/header-footer.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/multi-step.js"></script>
+    <script src="/js/shipping-details.js"></script>
+    <script src="/js/payment.js"></script>
+    <script src="https://kit.fontawesome.com/6a7e2a29bc.js" crossorigin="anonymous"></script>
+</body>
+</html>
