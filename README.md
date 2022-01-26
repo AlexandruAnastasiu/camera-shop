@@ -49,7 +49,7 @@
 ## About The Project
 
 This application simulates an online camera store, with various features such as a shopping cart, a multi-step form for ordering details and a working search bar for in-store products.
-Ths project was made as part of an evaluation of the first ZegaSoftware bootcamp, using only: 
+This project was made as part of an evaluation of the first ZegaSoftware bootcamp, using only: 
 * HTML
 * CSS + Bootstrap
 * Javascript
