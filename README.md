@@ -68,7 +68,8 @@ Frameworks:
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-The usage is easy and efficient, the navigation being designed in an intuitive way that simulates in detail the interaction with an online store
+The usage is easy and efficient, the navigation being designed in an intuitive way that simulates in detail the interaction with an online store.
+
 Featured Products:
 <img src="img/demo2.PNG" alt="Demo">
 
